@@ -1,10 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Projects Showcase</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script type="module">
+      import { createIcons, Home, Github, Mail, Link, Folder, Code } from 'https://cdn.jsdelivr.net/npm/lucide@latest/dist/esm/lucide.js';
+      createIcons({ icons: { Home, Github, Mail, Link, Folder, Code } });
+    </script>
+    <style>
+        /* Custom font import for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello World!</h1>
-    <p>This is my first GitHub Pages site.</p>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+
+    <!-- Header / Navigation (Simple & Fixed) -->
+    <header class="sticky top-0 z-10 bg-gray-900/90 backdrop-blur-sm shadow-lg border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-teal-400">
+                &lt;Portfolio /&gt;
+            </a>
+            <div class="space-x-4">
+                <a href="#projects" class="text-sm font-medium hover:text-teal-400 transition duration-150">Projects</a>
+                <a href="#contact" class="text-sm font-medium hover:text-teal-400 transition duration-150">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-16 md:mb-24">
+            <div class="p-6 md:p-12 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+                <div data-lucide="code" class="w-12 h-12 text-teal-400 mx-auto mb-4"></div>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    My Work on GitHub
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-6">
+                    A collection of my recent and most interesting projects, ranging from full-stack applications to focused scripts and libraries.
+                </p>
+                <a href="https://github.com/YourUsername" target="_blank" class="inline-flex items-center space-x-2 px-6 py-3 bg-teal-600 text-white font-semibold rounded-full shadow-lg hover:bg-teal-500 transition duration-300 transform hover:scale-[1.02]">
+                    <span data-lucide="github" class="w-5 h-5"></span>
+                    <span>Visit GitHub Profile</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section id="projects" class="mb-16 md:mb-24">
+            <h2 class="text-4xl font-bold mb-10 text-center text-teal-400">
+                Project Showcase
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 (Featured) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-2xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-teal-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-teal-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">Full Stack App Platform</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        A comprehensive SaaS boilerplate built with React, Node.js, and PostgreSQL, focusing on performance and scalability. Features authentication, state management, and robust CI/CD pipelines.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#React #NodeJS #PostgreSQL #SaaS</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-1" target="_blank" class="text-sm font-medium text-teal-400 hover:text-teal-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                        <a href="https://live-demo-1.com" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150 flex items-center">
+                            <span data-lucide="link" class="w-4 h-4 mr-1"></span>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-indigo-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-indigo-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">Data Visualization Library</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        An interactive, browser-based library for visualizing large datasets using D3.js. Includes various chart types like heatmaps and scatter plots.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#D3js #JavaScript #DataViz</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-2" target="_blank" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                        <a href="https://live-demo-2.com" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150 flex items-center">
+                            <span data-lucide="link" class="w-4 h-4 mr-1"></span>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-amber-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-amber-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">Python Automation Script</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        A utility script written in Python for automating file management tasks and batch renaming operations across large directories. Focus on robust error handling.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#Python #Automation #CLI</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-3" target="_blank" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                        <!-- No Live Demo link for a script -->
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-green-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-green-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">E-commerce API Backend</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        A RESTful API built with Go (Golang) and a microservices architecture. Implements product catalog, user authentication, and order processing.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#GoLang #Microservices #API</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-4" target="_blank" class="text-sm font-medium text-green-400 hover:text-green-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-pink-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-pink-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">Mobile-First UI Kit</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        A set of accessible, highly reusable UI components built purely with CSS and minimal JavaScript, optimized for mobile viewing and performance.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#CSS #Tailwind #A11Y #WebDev</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-5" target="_blank" class="text-sm font-medium text-pink-400 hover:text-pink-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                        <a href="https://live-demo-5.com" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150 flex items-center">
+                            <span data-lucide="link" class="w-4 h-4 mr-1"></span>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl transition duration-300 transform hover:translate-y-[-4px] hover:shadow-red-500/20 border border-gray-700">
+                    <div class="flex items-center mb-4 text-red-400">
+                        <div data-lucide="folder" class="w-6 h-6 mr-3"></div>
+                        <h3 class="text-xl font-bold">3D Interactive Demo</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        An experiment in web graphics using Three.js to render a complex, interactive 3D scene directly in the browser with performance optimizations.
+                    </p>
+                    <p class="text-xs font-mono text-gray-500 mb-4">#ThreeJS #WebGL #JavaScript</p>
+                    
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://github.com/YourUsername/Project-6" target="_blank" class="text-sm font-medium text-red-400 hover:text-red-300 transition duration-150 flex items-center">
+                            <span data-lucide="github" class="w-4 h-4 mr-1"></span>
+                            Repo
+                        </a>
+                        <a href="https://live-demo-6.com" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150 flex items-center">
+                            <span data-lucide="link" class="w-4 h-4 mr-1"></span>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Contact CTA -->
+        <section id="contact" class="text-center py-12 border-t border-gray-800">
+            <h2 class="text-3xl font-bold mb-4 text-white">Let's Connect</h2>
+            <p class="text-gray-400 mb-6 max-w-xl mx-auto">
+                Interested in collaborating or just want to say hi? Feel free to reach out.
+            </p>
+            <a href="mailto:your.email@example.com" class="inline-flex items-center space-x-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-full shadow-lg hover:bg-gray-600 transition duration-300">
+                <span data-lucide="mail" class="w-5 h-5"></span>
+                <span>Send Me an Email</span>
+            </a>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p class="mt-1">Built with HTML and Tailwind CSS.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
