@@ -140,4 +140,99 @@
       text-align: center;
       color: #999;
       font-size: 0.85rem;
-      padding:
+      padding: 3rem 1rem;
+      border-top: 1px solid #eee;
+      letter-spacing: 1px;
+    }
+
+    footer .social-links {
+      margin-top: 1rem;
+    }
+
+    footer .social-links a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    footer .social-links a:hover svg {
+      fill: #000;
+      transform: scale(1.1);
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 1100px) {
+      section { padding: 60px 5%; }
+    }
+
+    @media (max-width: 800px) {
+      .grid-portrait { grid-template-columns: repeat(3, 1fr); }
+      .grid-landscape { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 500px) {
+      .grid-portrait { grid-template-columns: repeat(2, 1fr); }
+      .grid-landscape { grid-template-columns: repeat(1, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FUNMI LOOI-SOMOYE</h1>
+    <h2>PHOTOGRAPHY</h2>
+  </header>
+
+  <section class="feature">
+    <img src="../photography/images/n1.jpg" alt="What colour is nude">
+    <h2>WHAT COLOUR IS NUDE?</h2>
+    <p><em>As seen in the ACU Review vol 03 issue 01.</em></p>
+    <p>
+      What Colour is Nude? is an artistic response to systematic racism and division.
+      Growing up in a predominantly white town made it easy for me to be blind to how unbalanced
+      the world was for people like me. It wasn't until I was older that I realised plasters weren't made
+      with me in mind. In this image, the plaster represents how people of colour are still forgotten in society.
+      Why is it coloured nude? What is the colour nude and why is it only one colour?
+    </p>
+  </section>
+
+  <section class="video-section">
+    <h2>MIRROR BETWEEN US</h2>
+    <p>
+      This series connects people and places through reflection. Every portrait hides a face yet opens a window
+      to the world that surrounds us and the unseen bonds that link humanity to its landscapes.
+    </p>
+    <img src="../photography/images/Video.gif" alt="Mirror Between Us Animation" class="video-player">
+  </section>
+
+  <section class="feature">
+    <h2>FILM PHOTOGRAPHY</h2>
+    <p>A collection of my favourite moments captured on film</p>
+    
+    <div class="film-gallery grid-portrait">
+      <img src="../photography/images/film1.jpg" alt="Film Portrait 1">
+      <img src="../photography/images/film2.jpg" alt="Film Portrait 2">
+      <img src="../photography/images/film3.jpg" alt="Film Portrait 3">
+      <img src="../photography/images/film4.jpg" alt="Film Portrait 4">
+      <img src="../photography/images/film5.jpg" alt="Film Portrait 5">
+    </div>
+
+    <div class="film-gallery grid-landscape">
+      <img src="../photography/images/film_l1.jpg" alt="Film Landscape 1">
+      <img src="../photography/images/film_l2.jpg" alt="Film Landscape 2">
+      <img src="../photography/images/film_l3.jpg" alt="Film Landscape 3">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Funmi Looi-Somoye · All images © respective owners
+    <div class="social-links">
+      <a href="https://www.instagram.com/fumephotos/" target="_blank" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24">
+          <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.5 1 .4.4.8.9 1 1.5.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-1 1.5-.4.4-.9.8-1.5 1-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.5-1-.4-.4-.8-.9-1-1.5-.2-.4-.4-1.1-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 1-1.5.4-.4.9-.8 1.5-1 .4-.2 1.1-.4 2.3-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.5.2-1.9.4-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.5.4 1.9.2.5.4.8.8 1.2.4.4.7.6 1.2.8.4.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.5-.2 1.9-.4.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.5-.4-1.9-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a5.5 5.5 0 1 1 0 11.1 5.5 5.5 0 0 1 0-11.1zm0 9.1a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm5.7-9.5a1.3 1.3 0 1 1 0-2.7 1.3 1.3 0 0 1 0 2.7z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
