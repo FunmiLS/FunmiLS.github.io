@@ -46,8 +46,8 @@
 
     /* --- Content Sections --- */
     section {
-      padding: 100px 8%;
-      max-width: 1100px;
+      padding: 100px 5%;
+      max-width: 1300px; /* Increased from 1100px for larger display */
       margin: 0 auto;
       text-align: center;
     }
@@ -70,15 +70,15 @@
     .description {
       font-size: 1.2rem;
       color: var(--text-secondary);
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 2.5rem;
       font-weight: 400;
     }
 
     /* --- Main Feature Image --- */
     .feature-main-img {
-      width: 75%;
-      max-width: 800px;
+      width: 85%; /* Slightly larger */
+      max-width: 900px;
       display: block;
       margin: 20px auto 0;
       border-radius: var(--border-radius);
@@ -103,21 +103,22 @@
     /* --- Gallery Grids --- */
     .gallery-grid {
       display: grid;
-      gap: 16px;
+      gap: 24px; /* Increased gap for cleaner look at larger sizes */
       margin-top: 3rem;
     }
 
-    .grid-portrait { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
-    .grid-landscape { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 16px; }
+    /* Increased min-width from 180px to 250px to make film portraits larger */
+    .grid-portrait { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .grid-landscape { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 24px; }
     
-    /* Uniform Digital Grid */
+    /* Digital Grid: Changed from 3 columns to 2 for significantly larger images */
     .grid-digital {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       margin-top: 2rem;
     }
 
     .grid-digital img {
-      aspect-ratio: 1 / 1; /* Makes them square; change to 4/5 or 3/2 if preferred */
+      aspect-ratio: 4 / 5; /* Adjusted for a professional vertical look */
       object-fit: cover;
     }
 
@@ -129,7 +130,7 @@
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     /* --- Footer --- */
@@ -146,7 +147,7 @@
 
     @media (max-width: 800px) {
       h2 { font-size: 2rem; }
-      .grid-digital { grid-template-columns: 1fr; } 
+      .grid-digital, .grid-portrait, .grid-landscape { grid-template-columns: 1fr; } 
       .feature-main-img { width: 95%; }
       section { padding: 60px 20px; }
     }
