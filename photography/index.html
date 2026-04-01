@@ -98,7 +98,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
-    /* --- Film Section (Updated for 5 in a row) --- */
+    /* --- Film Section (5 per row, Portrait) --- */
     .film-gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
@@ -108,7 +108,8 @@
 
     .film-gallery img {
       width: 100%;
-      aspect-ratio: 1 / 1; /* Keeps them uniform, remove if you want original aspect ratios */
+      /* Changed from 1/1 to 2/3 for a portrait film look */
+      aspect-ratio: 2 / 3; 
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -146,24 +147,28 @@
     }
 
     /* --- Responsive Adjustments --- */
-    @media (max-width: 1024px) {
+    @media (max-width: 1100px) {
+      section {
+        padding: 60px 5%; /* Give more room for the 5-row layout on medium screens */
+      }
       .film-gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 in a row for tablets */
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 10px;
       }
     }
 
-    @media (max-width: 700px) {
-      section {
-        padding: 50px 6%;
+    @media (max-width: 800px) {
+      .film-gallery {
+        grid-template-columns: repeat(3, 1fr); /* Drops to 3 on smaller tablets */
       }
+    }
+
+    @media (max-width: 500px) {
       header h1 {
         font-size: 1.6rem;
       }
       .film-gallery {
-        grid-template-columns: repeat(1, 1fr); /* 1 in a row for mobile */
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: repeat(2, 1fr); /* 2 in a row on mobile looks better for portrait */
       }
     }
   </style>
