@@ -68,12 +68,11 @@
     .description {
       font-size: 1.2rem;
       color: var(--text-secondary);
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 2.5rem;
       font-weight: 400;
     }
 
-    /* --- Featured Image: 3/4 of previous size (~55%) --- */
     .feature-main-img {
       width: 55%; 
       max-width: 600px;
@@ -104,38 +103,41 @@
       margin-top: 3rem;
     }
 
-    /* Row of 5 for Film Portraits */
-    .grid-film-portraits {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    /* Row of 3 for Film Landscapes */
-    .grid-film-landscapes {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 16px;
-    }
-    
-    /* Row of 3 for Digital */
-    .grid-digital {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 2rem;
-    }
-
     .gallery-grid img {
       width: 100%;
-      aspect-ratio: 1 / 1; 
       object-fit: cover;
       border-radius: 12px;
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Keep landscapes a bit wider if preferred, or stick to square for the grid */
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Row of 5 - Portrait Shape */
+    .grid-film-portraits {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .grid-film-portraits img {
+      aspect-ratio: 2 / 3;
+    }
+
+    /* Row of 3 - Landscape Shape */
+    .grid-film-landscapes {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 16px;
+    }
     .grid-film-landscapes img {
       aspect-ratio: 3 / 2;
     }
-
-    .gallery-grid img:hover {
-      transform: scale(1.03);
+    
+    /* Row of 3 - Portrait Shape */
+    .grid-digital {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2rem;
+    }
+    .grid-digital img {
+      aspect-ratio: 2 / 3;
     }
 
     footer {
@@ -149,7 +151,6 @@
     .social-links { margin-top: 24px; }
     .social-links a { text-decoration: none; color: var(--accent); font-weight: 500; }
 
-    /* Mobile adjustments: Stack images so they aren't tiny on phones */
     @media (max-width: 800px) {
       h2 { font-size: 2rem; }
       .grid-film-portraits, .grid-film-landscapes, .grid-digital { 
@@ -181,7 +182,9 @@
     <span class="sub-heading">As seen in the ACU Review vol 03 issue 01.</span>
     <p class="description">
       What Colour is Nude? is an artistic response to systemic racism and the divisions it creates. 
-      In this image, the plaster becomes a symbol of that broader erasure.
+      Having grown up in a predominantly white town, I was largely sheltered from the inequalities that many people of colour navigate daily. 
+      It was only with age that a realisation struck me: plasters were never designed with my skin in mind. 
+      In this image, the plaster becomes a symbol of that broader erasure. It raises a question: why is "nude" a single colour, and whose skin does it actually represent?
     </p>
     <img src="../photography/images/n1.jpg" alt="What colour is nude" class="feature-main-img">
   </section>
