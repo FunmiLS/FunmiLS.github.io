@@ -57,6 +57,7 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
 
     .sub-heading {
@@ -74,19 +75,15 @@
       font-weight: 400;
     }
 
-    /* --- Specific Image Size Adjustment --- */
+    /* --- Main Feature Image --- */
     .feature-main-img {
-      width: 75%; /* Reduced to 3/4 size */
+      width: 75%;
       max-width: 800px;
       display: block;
       margin: 20px auto 0;
       border-radius: var(--border-radius);
       box-shadow: 0 20px 50px rgba(0,0,0,0.1);
       transition: transform 0.4s ease;
-    }
-
-    .feature-main-img:hover {
-      transform: scale(1.01);
     }
 
     /* --- Video Section --- */
@@ -103,8 +100,8 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    /* --- Grid System --- */
-    .film-gallery {
+    /* --- Gallery Grids --- */
+    .gallery-grid {
       display: grid;
       gap: 16px;
       margin-top: 3rem;
@@ -112,16 +109,22 @@
 
     .grid-portrait { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
     .grid-landscape { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 16px; }
+    
+    /* Specifically for the 3-image Digital section */
+    .grid-digital {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2rem;
+    }
 
-    .film-gallery img {
+    .gallery-grid img {
       width: 100%;
       object-fit: cover;
       border-radius: 12px;
-      transition: transform 0.4s ease;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .film-gallery img:hover {
-      transform: scale(1.02);
+    .gallery-grid img:hover {
+      transform: scale(1.03);
     }
 
     /* --- Footer --- */
@@ -136,9 +139,10 @@
     .social-links { margin-top: 24px; }
     .social-links a { text-decoration: none; color: var(--accent); font-weight: 500; }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       h2 { font-size: 2rem; }
-      .feature-main-img { width: 90%; } /* Slightly larger on mobile for visibility */
+      .grid-digital { grid-template-columns: 1fr; } /* Stack on mobile */
+      .feature-main-img { width: 95%; }
       section { padding: 60px 20px; }
     }
   </style>
@@ -177,7 +181,7 @@
     <h2>FILM PHOTOGRAPHY</h2>
     <p class="description">A collection of my favourite moments captured on film</p>
     
-    <div class="film-gallery grid-portrait">
+    <div class="gallery-grid grid-portrait">
       <img src="../photography/images/film1.jpg" alt="Film Portrait 1">
       <img src="../photography/images/film2.jpg" alt="Film Portrait 2">
       <img src="../photography/images/film3.jpg" alt="Film Portrait 3">
@@ -185,10 +189,21 @@
       <img src="../photography/images/film5.jpg" alt="Film Portrait 5">
     </div>
 
-    <div class="film-gallery grid-landscape">
+    <div class="gallery-grid grid-landscape">
       <img src="../photography/images/film_l1.jpg" alt="Film Landscape 1">
       <img src="../photography/images/film_l2.jpg" alt="Film Landscape 2">
       <img src="../photography/images/film_l3.jpg" alt="Film Landscape 3">
+    </div>
+  </section>
+
+  <section class="feature" style="border-top: 1px solid #f2f2f2;">
+    <h2>DIGITAL</h2>
+    <p class="description">Exploring modern perspectives through digital frames.</p>
+    
+    <div class="gallery-grid grid-digital">
+      <img src="../photography/images/dg1.jpg" alt="Digital Photography 1">
+      <img src="../photography/images/dg2.jpg" alt="Digital Photography 2">
+      <img src="../photography/images/dg3.jpg" alt="Digital Photography 3">
     </div>
   </section>
 
