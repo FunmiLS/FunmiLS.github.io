@@ -110,10 +110,15 @@
     .grid-portrait { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
     .grid-landscape { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 16px; }
     
-    /* Specifically for the 3-image Digital section */
+    /* Uniform Digital Grid */
     .grid-digital {
       grid-template-columns: repeat(3, 1fr);
       margin-top: 2rem;
+    }
+
+    .grid-digital img {
+      aspect-ratio: 1 / 1; /* Makes them square; change to 4/5 or 3/2 if preferred */
+      object-fit: cover;
     }
 
     .gallery-grid img {
@@ -141,7 +146,7 @@
 
     @media (max-width: 800px) {
       h2 { font-size: 2rem; }
-      .grid-digital { grid-template-columns: 1fr; } /* Stack on mobile */
+      .grid-digital { grid-template-columns: 1fr; } 
       .feature-main-img { width: 95%; }
       section { padding: 60px 20px; }
     }
@@ -153,24 +158,23 @@
     <h1>FUNMI LOOI-SOMOYE</h1>
   </header>
 
-  <section class="feature">
-    <h2>WHAT COLOUR IS NUDE?</h2>
-    <span class="sub-heading">As seen in the ACU Review vol 03 issue 01.</span>
-    <p class="description">
-What Colour is Nude? is an artistic response to systemic racism and the divisions it creates. Having grown up in a predominantly white town, I was largely sheltered from the inequalities that many people of colour navigate daily. It was only with age that a simple realisation struck me, plasters were never designed with my skin in mind. In this image, the plaster becomes a symbol of that broader erasure: the quiet, persistent way people of colour are overlooked in society. It raises a question, why is "nude" a single colour, and whose skin does it actually represent?
-    </p>
-    <img src="../photography/images/n1.jpg" alt="What colour is nude" class="feature-main-img">
-  </section>
-
   <section class="video-section">
     <div style="max-width: 1100px; margin: 0 auto;">
         <h2>MIRROR BETWEEN US</h2>
         <p class="description">
-          This series connects people and places through reflection. Every portrait hides a face yet opens a window
-          to the world that surrounds us and the unseen bonds that link humanity to its landscapes.
+          This series connects people and places through reflection.
         </p>
         <img src="../photography/images/Video.gif" alt="Mirror Between Us Animation" class="video-player">
     </div>
+  </section>
+
+  <section class="feature">
+    <h2>WHAT COLOUR IS NUDE?</h2>
+    <span class="sub-heading">As seen in the ACU Review vol 03 issue 01.</span>
+    <p class="description">
+      What Colour is Nude? is an artistic response to systemic racism and the divisions it creates. In this image, the plaster becomes a symbol of broader erasure: the quiet, persistent way people of colour are overlooked in society.
+    </p>
+    <img src="../photography/images/n1.jpg" alt="What colour is nude" class="feature-main-img">
   </section>
 
   <section class="feature">
