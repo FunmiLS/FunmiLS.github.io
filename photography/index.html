@@ -23,7 +23,6 @@
       line-height: 1.6;
     }
 
-    /* --- Sticky Navigation --- */
     header {
       position: sticky;
       top: 0;
@@ -44,10 +43,9 @@
       text-transform: uppercase;
     }
 
-    /* --- Content Sections --- */
     section {
       padding: 100px 5%;
-      max-width: 1300px; /* Increased from 1100px for larger display */
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
     }
@@ -70,15 +68,15 @@
     .description {
       font-size: 1.2rem;
       color: var(--text-secondary);
-      max-width: 750px;
+      max-width: 700px;
       margin: 0 auto 2.5rem;
       font-weight: 400;
     }
 
-    /* --- Main Feature Image --- */
+    /* --- Featured Image: 3/4 of previous size (~55%) --- */
     .feature-main-img {
-      width: 85%; /* Slightly larger */
-      max-width: 900px;
+      width: 55%; 
+      max-width: 600px;
       display: block;
       margin: 20px auto 0;
       border-radius: var(--border-radius);
@@ -86,7 +84,6 @@
       transition: transform 0.4s ease;
     }
 
-    /* --- Video Section --- */
     .video-section {
       background-color: #f5f5f7;
       max-width: 100%;
@@ -103,37 +100,44 @@
     /* --- Gallery Grids --- */
     .gallery-grid {
       display: grid;
-      gap: 24px; /* Increased gap for cleaner look at larger sizes */
+      gap: 16px;
       margin-top: 3rem;
     }
 
-    /* Increased min-width from 180px to 250px to make film portraits larger */
-    .grid-portrait { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .grid-landscape { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 24px; }
-    
-    /* Digital Grid: Changed from 3 columns to 2 for significantly larger images */
-    .grid-digital {
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 2rem;
+    /* Row of 5 for Film Portraits */
+    .grid-film-portraits {
+      grid-template-columns: repeat(5, 1fr);
     }
 
-    .grid-digital img {
-      aspect-ratio: 4 / 5; /* Adjusted for a professional vertical look */
-      object-fit: cover;
+    /* Row of 3 for Film Landscapes */
+    .grid-film-landscapes {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 16px;
+    }
+    
+    /* Row of 3 for Digital */
+    .grid-digital {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2rem;
     }
 
     .gallery-grid img {
       width: 100%;
+      aspect-ratio: 1 / 1; 
       object-fit: cover;
       border-radius: 12px;
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .gallery-grid img:hover {
-      transform: scale(1.02);
+    /* Keep landscapes a bit wider if preferred, or stick to square for the grid */
+    .grid-film-landscapes img {
+      aspect-ratio: 3 / 2;
     }
 
-    /* --- Footer --- */
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
     footer {
       padding: 80px 20px;
       color: var(--text-secondary);
@@ -145,10 +149,13 @@
     .social-links { margin-top: 24px; }
     .social-links a { text-decoration: none; color: var(--accent); font-weight: 500; }
 
+    /* Mobile adjustments: Stack images so they aren't tiny on phones */
     @media (max-width: 800px) {
       h2 { font-size: 2rem; }
-      .grid-digital, .grid-portrait, .grid-landscape { grid-template-columns: 1fr; } 
-      .feature-main-img { width: 95%; }
+      .grid-film-portraits, .grid-film-landscapes, .grid-digital { 
+        grid-template-columns: 1fr; 
+      } 
+      .feature-main-img { width: 85%; }
       section { padding: 60px 20px; }
     }
   </style>
@@ -174,9 +181,7 @@
     <span class="sub-heading">As seen in the ACU Review vol 03 issue 01.</span>
     <p class="description">
       What Colour is Nude? is an artistic response to systemic racism and the divisions it creates. 
-      Having grown up in a predominantly white town, I was largely sheltered from the inequalities that many people of colour navigate daily. 
-      It was only with age that a realisation struck me, plasters were never designed with my skin in mind. 
-      In this image, the plaster becomes a symbol of that broader erasure. It raises a question why is "nude" a single colour, and whose skin does it actually represent?
+      In this image, the plaster becomes a symbol of that broader erasure.
     </p>
     <img src="../photography/images/n1.jpg" alt="What colour is nude" class="feature-main-img">
   </section>
@@ -185,18 +190,18 @@
     <h2>FILM PHOTOGRAPHY</h2>
     <p class="description">A collection of my favourite moments captured on film</p>
     
-    <div class="gallery-grid grid-portrait">
-      <img src="../photography/images/film1.jpg" alt="Film Portrait 1">
-      <img src="../photography/images/film2.jpg" alt="Film Portrait 2">
-      <img src="../photography/images/film3.jpg" alt="Film Portrait 3">
-      <img src="../photography/images/film4.jpg" alt="Film Portrait 4">
-      <img src="../photography/images/film5.jpg" alt="Film Portrait 5">
+    <div class="gallery-grid grid-film-portraits">
+      <img src="../photography/images/film1.jpg" alt="Film 1">
+      <img src="../photography/images/film2.jpg" alt="Film 2">
+      <img src="../photography/images/film3.jpg" alt="Film 3">
+      <img src="../photography/images/film4.jpg" alt="Film 4">
+      <img src="../photography/images/film5.jpg" alt="Film 5">
     </div>
 
-    <div class="gallery-grid grid-landscape">
-      <img src="../photography/images/film_l1.jpg" alt="Film Landscape 1">
-      <img src="../photography/images/film_l2.jpg" alt="Film Landscape 2">
-      <img src="../photography/images/film_l3.jpg" alt="Film Landscape 3">
+    <div class="gallery-grid grid-film-landscapes">
+      <img src="../photography/images/film_l1.jpg" alt="Film L1">
+      <img src="../photography/images/film_l2.jpg" alt="Film L2">
+      <img src="../photography/images/film_l3.jpg" alt="Film L3">
     </div>
   </section>
 
@@ -204,9 +209,9 @@
     <h2>DIGITAL</h2>
     
     <div class="gallery-grid grid-digital">
-      <img src="../photography/images/dg1.jpg" alt="Digital Photography 1">
-      <img src="../photography/images/dg2.jpg" alt="Digital Photography 2">
-      <img src="../photography/images/dg3.jpg" alt="Digital Photography 3">
+      <img src="../photography/images/dg1.jpg" alt="Digital 1">
+      <img src="../photography/images/dg2.jpg" alt="Digital 2">
+      <img src="../photography/images/dg3.jpg" alt="Digital 3">
     </div>
   </section>
 
